@@ -1,6 +1,9 @@
 First collectoin of NFTs. Deploying to ethereum mainnet. 
 
 
+What do I want this contract to do?
+
+Receive calls to mint tokens everyday as I push new images to Arweave
 
 
 
@@ -27,3 +30,9 @@ How can I mint basically one of ones and then set the uri after the fact.
 * deploy to polygon or arbitrum/optimism
 
 
+
+
+Foundry notes
+
+You need to initialize a foundry repo
+You need to install the oz contracts
