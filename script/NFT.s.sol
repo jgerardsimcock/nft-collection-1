@@ -9,7 +9,7 @@ contract MyScript is Script {
         uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
         vm.startBroadcast(deployerPrivateKey);
 
-        Infinessence nft = new Infinessence("Infinessence", "INF");
+        Infinessence nft = new Infinessence();
 
         vm.stopBroadcast();
     }

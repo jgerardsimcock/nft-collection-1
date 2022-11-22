@@ -32,7 +32,6 @@ contract Infinitest is Test {
         //change the url
         infinessence.safeMint(msg.sender, "https://anotherurl.com");
         assertEq(infinessence.tokenURI(1), "https://anotherurl.com");
-        assertNotEq(infinessence.tokenURI(0), "https://someurl.com");
 
 
 
