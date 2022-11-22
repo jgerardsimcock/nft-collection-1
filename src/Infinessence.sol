@@ -30,9 +30,7 @@ contract Infinessence is ERC721URIStorage, Pausable, Ownable, ERC721Burnable {
         _unpause();
     }
 
-
     function safeMint(address to, string memory _uri) 
-        
         public onlyOwner 
         returns (uint256) 
 
@@ -46,7 +44,6 @@ contract Infinessence is ERC721URIStorage, Pausable, Ownable, ERC721Burnable {
         return tokenId;
 
     }
-
 
     function _baseURI() internal view override returns (string memory) {
         return uri;

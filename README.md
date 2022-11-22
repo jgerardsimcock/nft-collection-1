@@ -1,5 +1,6 @@
 First collectoin of NFTs. Deploying to ethereum mainnet. 
 
+Notes [here](NOTES.md)
 
 What do I want this contract to do?
 
