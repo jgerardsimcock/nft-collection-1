@@ -33,7 +33,9 @@ contract Infinitest is Test {
         infinessence.safeMint(msg.sender, "https://anotherurl.com");
         assertEq(infinessence.tokenURI(1), "https://anotherurl.com");
 
-
+    //function testBurnNFT(tokenId) public {
+      //  infinessence._burn(tokenId)
+    }
 
     }
 

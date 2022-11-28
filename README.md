@@ -19,15 +19,22 @@ https://jxudqnf3isxb5oqief4ywuc425tnxj7icn7ssdtuvsio73gofmba.arweave.net/Teg4NLt
 
 Here is how this has to work
 
-Some process to deploy to Arweave and get base URL and have that URI returned
-Poll the Arweave blockchain until we receive the locatoin of our file
+Using a smart contract to track the ownership of NFT’s. Deploy the contract on eth mainnet, polygon or L2. Each NFT will be an image that comes from a stable diffusion rendering. The images will all be stored on Arweave and since the image URLs will change or be unpredictable we need to be able to update the URI. And since we are updating the URI each time we should create a mapping between the URI and the tokenID. So when we burn something what we will actually be doing is Looking up a tokenID, removing the url or turning it to null and then we will send the token to address(0).
 
-Once we have the file location we can mint the nft associated with that along with the attrs etc
+Functions that we’ll need
 
-How can I mint basically one of ones and then set the uri after the fact.
+1. Mint
+2. Burn
+3. Transfer
+4. Setting URI for Arweave
+5. Pause/Unpause
 
+The Sequence is: 
 
-
+1. Create Image
+2. Deploy to Arweave
+3. Mint NFT on contract with the URI set to the Arweave address 
+4. Put it for sale
 
 * Set up an alchemy account or an Infura account 
 * Create a wallet and get your Goerli account address from [here](https://goerlifaucet.com/)
@@ -38,8 +45,6 @@ How can I mint basically one of ones and then set the uri after the fact.
 * deploy to testnet 
 
 * deploy to polygon or arbitrum/optimism
-
-
 
 
 Foundry notes
