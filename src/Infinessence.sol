@@ -73,6 +73,31 @@ contract Infinessence is ERC721URIStorage, Pausable, Ownable, ERC721Burnable {
         super._burn(tokenId);
     }
 
+    function transferFrom(address from, address to, uint256 tokenId) 
+        public virtual 
+        {
+        require(from == _ownerOf[id], "WRONG_FROM");
+        require(to != address(0), "INVALID_RECIPIENT");
 
-    // function transferTo(){}
+        require(
+            msg.sender == from || isApprovedForAll[from][msg.sender] || msg.sender == getApproved[id],
+            "NOT_AUTHORIZED"
+        );
+
+        unchecked {
+            _balanceOf[from]--;
+
+            _balanceOf[to]++;
+        }
+
+        _ownerOf[id] = to;
+
+        delete getApproved[id];
+
+        emit Transfer(from, to, id);
+    }
+
+    function safeTransferFrom(address from, address to, uint256 tokenId) {
+            transferFrom(from, to, id);
+    }
 }
